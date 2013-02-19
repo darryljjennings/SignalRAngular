@@ -1,0 +1,28 @@
+﻿@using System.Web.Optimization
+@{
+    ViewBag.Title = "Demo - SignalR and Angular.js";
+}
+
+@Scripts.Render("~/bundles/signalR")
+<script src="~/signalr/hubs"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+<script src="~/Scripts/chat.js"></script>
+
+<div ng-app>
+    <br />
+    <div class="container" ng-controller="chatCtrl">
+        <div class="input-append">
+            <form>
+                <input type="text" ng-model="message">
+                <input type="submit" class="btn btn-primary" value="Send" ng-click="broadcast()" />
+            </form>
+        </div>
+
+        <div class="container">
+            <blockquote ng-repeat="message in messages">
+                <p>{{message.text}}</p>
+                <small>{{message.datetime}}</small>
+            </blockquote>
+        </div>
+    </div>
+</div>

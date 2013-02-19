@@ -32,7 +32,6 @@ x64/
 *.tli
 *.tlh
 *.tmp
-*.log
 *.vspscc
 *.vssscc
 .builds
@@ -47,7 +46,9 @@ ipch/
 # Visual Studio profiler
 *.psess
 *.vsp
-*.vspx
+
+# Visual Studio misc
+*.vsmdi
 
 # Guidance Automation Toolkit
 *.gpState
@@ -78,21 +79,17 @@ publish
 # Publish Web Output
 *.Publish.xml
 
-# NuGet Packages Directory
+# NuGet packages
 packages
 
 # Windows Azure Build Output
 csx
 *.build.csdef
 
-# Windows Store app package directory
-AppPackages/
-
 # Others
 [Bb]in
 [Oo]bj
 sql
-TestResults
 [Tt]est[Rr]esult*
 *.Cache
 ClientBin
